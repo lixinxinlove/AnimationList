@@ -6,11 +6,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.lee.animationlist.view.ZoomListView;
+
+import static android.R.attr.button;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button button1;
     private Button button2;
     private Button button3;
+    private Button button4;
 
 
     @Override
@@ -22,10 +27,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button1 = (Button) findViewById(R.id.btn_1);
         button2 = (Button) findViewById(R.id.btn_2);
         button3 = (Button) findViewById(R.id.btn_3);
+        button4 = (Button) findViewById(R.id.btn_4);
 
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
+        button4.setOnClickListener(this);
 
     }
 
@@ -40,6 +47,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_3:
                 startActivity(new Intent(this, Demo3Activity.class));
+                break;
+            case R.id.btn_4:
+                startActivity(new Intent(this, ZoomActivity.class));
                 break;
         }
     }
